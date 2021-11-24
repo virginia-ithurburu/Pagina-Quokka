@@ -1,0 +1,42 @@
+@import './variables';
+
+@for $var from 1 through 5 {
+    .p#{$var} {
+        font-family: $fuenteTerciaria;
+        font-size: 120%;
+        text-align: center;
+        font-style: $estiloinclinado;
+    }
+}
+
+@for $li from 1 through 5 {
+    .li#{$li} {
+        list-style: none;
+        color: $colorSenario;
+        font-family: $fuenteSecundaria;
+        text-align: center;
+    }
+}
+
+@for $div from 1 through 5 {
+    .div#{$div} {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@for $p from 6 through 10 {
+    .p#{$p} {
+        font-family: $fuenteSecundaria;
+        font-size: 100%;
+        text-align: right;
+        font-style: $estiloinclinado;
+    }
+}
+
+@for $bread from 1 through 3 {
+    .bread#{$bread} {
+       font-family: $fuenteSecundaria; 
+       font-style: $estiloinclinado;
+    }
+}

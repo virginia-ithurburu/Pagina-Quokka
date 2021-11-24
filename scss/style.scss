@@ -1,0 +1,256 @@
+@import './imports/variables';
+@import './imports/bucles';
+@import './imports/mixins';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/*FONDO DE LA PÁGINA*/
+body {
+    background-image: url("../media/tree_bark.png");
+}
+
+/*HEADER*/
+
+header {
+    height: 140px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 90%;
+    grid-template-areas: 
+    "logo titulogan";
+    background-color: $colorPrimario;
+    .header__logo {
+            @include tamaño (0.5%, 0%);
+            justify-self: center;
+            grid-area: logo;
+            a {
+                img {
+                    @include tamañocaja (140px, 140px);
+                }
+            }
+        }
+    .header__tituloEslogan {
+            grid-area: titulogan;
+            justify-self: start;
+            @include tamaño (1%, 1%);
+            height: 130px;
+            .linkTitulo {
+                text-decoration: none;
+                    #tituloQuokka {
+                        color: $colorQuinario;
+                        font-size: 50px;
+                        text-align: center;
+                        font-family: $fuentePrincipal;
+                        @include tamaño (0.5%, 0.5%);
+                        transform: rotate(-10deg);
+                        transition: color 3s;
+                        &:hover {
+                        color: $colorSenario;
+                    }
+                }
+            }
+            .eslogan {
+                color: $colorSenario;
+                font-style: $estiloinclinado;
+                font-size: 20px;
+                text-align: center;
+                font-family: $fuenteTerciaria;
+        }
+    }            
+}
+
+        /*MENU*/
+
+nav{
+    @include tamaño (1%, 0.5%);
+    .navbar-brand {
+        font-family: $fuentePrincipal;
+        padding-right: 2%;
+    }
+    ul {
+        font-size: 20px;
+        li {
+            display: inline-block;
+            background-size: cover;
+            font-family: $fuenteTerciaria;
+            text-transform: $estiloMayuscula;
+        }
+    }
+    #buscarNav {
+        padding-left: 7%;
+    }
+}
+
+nav {
+    ol {
+        .bread1 {
+            a {
+                color: $colorPrimario;
+            }
+        }
+        li {
+            color: $colorSecundario;
+        }
+    }
+}
+
+/*FORMULARIO*/
+.formulario {
+    .formulario__titulo {
+        color: $colorSenario;
+        font-weight: bold;
+        font-family: $fuenteTerciaria;
+        @include tamañocaja (20%, 41%); 
+        justify-self: center;
+        @include tamaño (2%, 1%);
+    }
+
+    .formulario__datos {
+        color: $colorSenario;
+        font-weight: bold;
+        font-family: $fuenteSecundaria;
+    }
+
+    .formulario__checkbox {
+        color: $colorSecundario;
+        font-style: $estiloinclinado;
+        }
+}
+
+     /* PARTE CENTRAL DE LA PÁGINA */
+/*H3 DE RECOMENDACIONES*/
+
+.aside__titulo {
+    font-family: $fuenteTerciaria;
+    padding-bottom: 5%;
+    font-size: 30px;
+}
+
+/* PAGINA VESTIMENTA */
+
+.main__Vestimenta {
+    div {
+        ul {
+            li {
+                a {
+                    @include formatodescripcion (none, $colorPrimario);
+                }
+            }
+        }
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* PAGINA OTROS-COMIDA */
+.main__otrosComida {
+    div {
+        section {
+            p {
+                a {
+                    @include formatodescripcion (none, $colorPrimario);
+                }
+            }
+        }
+    }
+}
+
+/* PAGINA OTROS */
+.main__otros {
+    div {
+        section {
+            p {
+                a {
+                    @include formatodescripcion(none, $colorSecundario)
+                }
+            }
+        }
+    }
+}
+
+        /*FOOTER*/
+.footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 5%;
+    .footer__seguinos {
+        color: $colorPrimario;
+        font-style: $estiloinclinado;
+        font-family: $fuenteSecundaria;
+        font-size: 15px;
+    }
+    .footer__iconos {
+        width: 15%;
+        @include tamaño (0.5%, 0.5%);
+        justify-content: center;
+        text-align: center;
+        li {
+            display: inline-block;
+            position: relative;
+            @include tamaño (5%, 0.5%);
+            .footer__link {
+                text-decoration: none;
+                @include tamañocaja (25px, 25px);
+            }
+            
+        }
+    
+    }
+    
+}
+
+        /* MEDIA QUERIES */
+/* TABLET */
+@media only screen and (max-width: 768px) and (min-width: 577px)
+{
+    header {
+        background-color: $colorTerciario;
+        .header__tituloEslogan {
+            padding-left: 10%;
+            .linkTitulo {
+                #tituloQuokka {
+                    color: $colorPrimario;
+                }
+            }
+            .eslogan {
+                color: $colorSenario;
+            }
+        }
+    }
+    .footer {
+        padding: 5%;
+        .footer__iconos {
+            width: 30%;
+        }
+    }
+
+}
+/* MOBILE */
+@media only screen and (max-width: 576px) and (min-width:0px)
+{
+    header {
+        background-color: $colorSecundario;
+        .header__logo {
+            padding-left: 100%;
+        }
+        .header__tituloEslogan {
+            display: none;
+        }
+    }
+    .footer {
+       padding: 5%;
+       .footer__iconos {
+        width: 40%;
+      } 
+    }
+
+}

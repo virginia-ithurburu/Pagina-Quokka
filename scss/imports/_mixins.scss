@@ -1,0 +1,15 @@
+
+@mixin tamaño ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin tamañocaja ($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin formatodescripcion ($textdeco, $color) {
+    text-decoration: $textdeco;
+    color: $color;
+}
