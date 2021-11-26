@@ -127,6 +127,20 @@
   font-family: "Chelsea Market", cursive;
   font-style: italic; }
 
+.div6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Chelsea Market", cursive;
+  text-align: center; }
+
+.div7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Chelsea Market", cursive;
+  text-align: center; }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -227,6 +241,30 @@ nav ol li {
   font-family: "Averia Gruesa Libre", cursive;
   padding-bottom: 5%;
   font-size: 30px; }
+
+main .main__banner img {
+  width: 100%; }
+
+main .main__quienes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  padding: 1%; }
+  main .main__quienes h4 {
+    color: #ba6b6c; }
+
+main .main__porque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  padding: 1%; }
+  main .main__porque h5 {
+    color: #ef9a9a; }
+
+main .divImg img {
+  width: 220%; }
 
 /* PAGINA VESTIMENTA */
 .main__Vestimenta div ul li a {
