@@ -263,8 +263,11 @@ main .main__porque {
   main .main__porque h5 {
     color: #ef9a9a; }
 
-main .divImg img {
-  width: 220%; }
+main .divImg {
+  display: flex;
+  justify-content: center; }
+  main .divImg img {
+    width: 300px; }
 
 /* PAGINA VESTIMENTA */
 .main__Vestimenta div ul li a {

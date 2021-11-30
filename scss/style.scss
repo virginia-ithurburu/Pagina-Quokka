@@ -159,8 +159,10 @@ main {
         }
     }
     .divImg {
+        display: flex;
+        justify-content: center;
         img {
-            width: 220%;
+            width: 300px;
         }
     }
 }
