@@ -40,3 +40,13 @@
        font-style: $estiloinclinado;
     }
 }
+
+@for $divs from 6 through 7 {
+    .div#{$divs} {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: $fuenteSecundaria;
+        text-align: center;
+    }
+}
